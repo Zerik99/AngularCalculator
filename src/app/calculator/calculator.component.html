@@ -1,0 +1,18 @@
+<div class="container border border-secondary-subtle p-5">
+  <!--Calculation edit text-->
+  <div class="d-flex justify-content-end container w-50 border border-secondary-subtle">
+    <app-calc-window [textvalue]="CalcText"></app-calc-window>
+  </div>
+  <!--Number Buttons-->
+  <div class="d-flex justify-content-center container w-50 border border-secondary-subtle">
+    <div class="d-flex row row-cols-4">
+      <app-button class="col p-1"
+      *ngFor="let button of CalcLayout"
+      [value]="button.value"
+      [type]="button.type"
+      (click)="onButtonClick(button)"
+      ></app-button>
+    </div>
+  </div>
+</div>
+
